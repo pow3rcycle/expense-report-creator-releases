@@ -6,11 +6,11 @@
 
 1. Download `ExpenseReportCreator-<version>-Setup.exe` from the [releases page](https://github.com/pow3rcycle/expense-report-creator-releases/releases/latest).
 2. Double-click it. If you see a SmartScreen warning, click **More info → Run anyway**. You don't need admin rights.
-3. Choose the install folder if you want to, then click **Install**. The installer adds shortcuts to the desktop and the Start menu.
+3. Click **Install**. The app installs for your Windows user and adds desktop and Start-menu shortcuts.
 
 ## 2. First launch
 
-A single welcome screen asks for **your name**. The app writes it on every form as `NAME: <your name>`, and you can change it later in Settings. It also confirms that the **SFT expense form** and **receipt reading (OCR)** are both ready. Click **Get started**.
+A single welcome screen asks for **your name**. The app writes it on every form as `NAME: <your name>`, and you can change it later in the **Your name** card. It also confirms that the **SFT expense form** and **receipt reading (OCR)** are both ready. Click **Get started**.
 
 ## 3. Make a report
 
@@ -24,7 +24,7 @@ A single welcome screen asks for **your name**. The app writes it on every form 
 
 ## 4. When HR releases a new form
 
-Go to **Settings → Change company form…** and select the new `.xls`. The app checks the layout before using it. If the layout isn't recognized, it tells you and keeps using the current form. You can always switch back to the bundled SFT form.
+On the main screen, find the **Company expense form** card and click **Change company form…** and select the new `.xls`. The app checks the layout before using it. If the layout isn't recognized, it tells you and keeps using the current form. You can always switch back to the bundled SFT form.
 
 ## 5. Updates, data and uninstalling
 
