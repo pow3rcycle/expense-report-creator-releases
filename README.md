@@ -17,11 +17,14 @@ You drop in your receipts. The app gives you back the two files you normally bui
 
 ## How it works
 
-1. **Create a report** for the week. The week ending must be a Saturday.
-2. **Add receipts.** Drag in photos, screenshots or PDFs, or type an expense in by hand. Every PDF page is shown.
-3. **Review each expense** beside its receipt. The app reads the vendor, date and total with on-device OCR. It only suggests values, and anything you type always wins.
-4. **Meals and incidentals are handled for you** under the SFT policy: the allowance by default, or the actual amount when a receipt is higher (never both). The $5 incidentals go on the in-between days of a trip, with a tickbox per day to override.
-5. **Preview the form** as it will print, then **export** the `.xls` and `.docx` and send them in as usual.
+Each report walks you through four steps:
+
+1. **Receipts** - drop in photos, screenshots or PDFs. They are read automatically on your PC (PaddleOCR, offline).
+2. **Expenses** - check each expense beside its receipt. Values read from the receipt are marked "From receipt"; your edits always win. Meals follow the SFT policy (allowance, or the actual amount when a receipt is higher - never both).
+3. **Trip and incidentals** - trip details, advances, and the $5/day incidentals for the in-between days of a trip (auto, with a per-day override).
+4. **Review and export** - Total, Less advances and **Net due**, the form as it will print, then one click exports the `.xls` form and `.docx` packet.
+
+Everything autosaves, and unsaved work is offered back after a crash.
 
 ## Install
 
