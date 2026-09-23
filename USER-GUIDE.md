@@ -24,7 +24,7 @@ A single welcome screen asks for **your name**. The app writes it on every form 
 
 ## 4. When HR releases a new form
 
-On the main screen, find the **Company expense form** card and click **Change company form…** and select the new `.xls`. The app checks the layout before using it. If the layout isn't recognized, it tells you and keeps using the current form. You can always switch back to the bundled SFT form.
+On the main screen, find the **Company expense form** card and click **Change company form…**, then select the new `.xls`. The app checks the layout before using it. If the layout isn't recognized, it tells you and keeps using the current form. You can always switch back to the bundled SFT form.
 
 ## 5. Updates, data and uninstalling
 
