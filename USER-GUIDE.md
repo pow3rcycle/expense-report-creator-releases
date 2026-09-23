@@ -34,4 +34,4 @@ Go to **Settings → Change company form…** and select the new `.xls`. The app
 
 ## 6. Questions or problems
 
-Contact Hasan (Controls). This app is a helper for filling in the form. It doesn't replace company policy, and the approver's decision is final.
+Contact Hasan. This app is a helper for filling in the form. It doesn't replace company policy, and the approver's decision is final.
