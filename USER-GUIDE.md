@@ -1,40 +1,58 @@
-# Expense Report Creator - User Guide
+# Expense Report Creator: User Guide
 
-*For Technic SFT employees. Everything runs on your PC, and nothing is uploaded.*
+*For Technic SFT employees. Windows 10 and 11. Everything runs on your PC and nothing is uploaded.*
 
 ## 1. Install
 
-1. Download `ExpenseReportCreator-<version>-Setup.exe` from the [releases page](https://github.com/pow3rcycle/expense-report-creator-releases/releases/latest).
-2. Double-click it. If you see a SmartScreen warning, click **More info → Run anyway**. You don't need admin rights.
-3. Click **Install**. The app installs for your Windows user and adds desktop and Start-menu shortcuts.
+1. Download `ExpenseReportCreator-<version>-Setup.exe` from the [website](https://pow3rcycle.github.io/expense-report-creator-releases/) or the [latest release](https://github.com/pow3rcycle/expense-report-creator-releases/releases/latest).
+2. Double-click it. If Windows shows **"Windows protected your PC"**, click **More info**, then **Run anyway**. The app isn't code-signed yet; each release lists SHA-256 checksums in `SHA256SUMS.txt`.
+3. It installs for your Windows user only (no admin rights) and adds desktop and Start menu shortcuts.
 
 ## 2. First launch
 
-A single welcome screen asks for **your name**. The app writes it on every form as `NAME: <your name>`, and you can change it later in **Settings**. It also confirms that the **SFT expense form** and **receipt reading (OCR)** are both ready. Click **Get started**.
+The welcome screen asks for **your name**. It goes on every form as `NAME: <your name>`, and you can change it later in **Settings**. The SFT form and the receipt reader are built in, so there is nothing else to set up.
 
-## 3. Make a report
+## 3. Start a report
 
-The app is organised as a left sidebar (**Reports**, **Settings**, **Help**) and, inside each report, four steps shown as tabs. Each step ends with a **Next** button, so you can simply follow them in order.
+A report is **one work order and one week** (HR closes out weekly). On **Reports**, click **New report** and fill in, in order:
 
-1. On **Reports**, click **New report** and pick the **week ending (Saturday)**. The title defaults to "Week ending <date>"; rename it if you like (for example "Customer visit").
-2. **1 Receipts** - drag photos, screenshots or PDFs onto the window, or click **Add files**. Receipts are read automatically on this PC (PaddleOCR, fully offline).
-3. **2 Expenses** - pick each expense on the left and check it beside the receipt image. Values read from the receipt are marked **From receipt**; anything you type is marked **Edited** and is never overwritten, even if the receipt is read again. Click the receipt image to enlarge it. Changes save automatically ("All changes saved").
-   - **Meals:** without a receipt the allowance is claimed; with a receipt above the allowance the actual amount is claimed - never both. The row shows what is claimed, e.g. "Claims $16.00 (allowance)".
-4. **3 Trip and incidentals** - trip purpose, customer, advances, and the **$5/day incidentals** list (ticked automatically for the days between your first and last meal day; tick or untick any day to override).
-5. **4 Review and export** - see **Total expenses**, **Less advances** and **Net due**, the weekly form exactly as it will print, and any checks. Click **Export form and receipts** to save the `.xls` form and the `.docx` receipt packet, then **Open** or **Show in folder**.
+- **Work order** (required)
+- **Week ending**: any day you pick snaps to its Saturday
+- **Trip folder** (required): the folder where you keep this trip's files. The app saves into it and never creates folders for you.
+- **Customer** and **Purpose** (optional). They go on the form's trip line with the work order.
 
-The **Claim total** in the report header updates as you work.
+If receipts are already in the trip folder, the app offers to add them.
 
-## 4. When HR releases a new form
+## 4. The three steps
 
-Go to **Settings -> Company expense form** and click **Change company form...**, then select the new `.xls`. The app checks the layout before using it; if it isn't recognised it tells you and keeps using the current form. You can always switch back to the built-in SFT form.
+1. **Receipts and trip.** Drag in photos, screenshots or PDFs, click **Choose files**, or paste a screenshot with **Ctrl+V**. Each receipt is read on this PC. Answer the trip questions (did you travel, which days). Flight, hotel and rental car receipts fill in the trip days for you; any change you make wins.
+2. **Check.** Go through each expense beside its receipt: amount, day, and what it was. Your edits are never overwritten. Use **Crop** to straighten a photo.
+   - **Meals** follow the SFT policy: the allowance ($16 breakfast, $19 lunch, $28 dinner), or the receipt when it is higher, never both. The meal grid suggests allowance meals for your trip days; nothing is added until you say so.
+   - **Incidentals:** $5.00 for each full day away.
+   - **Mileage:** set your rate once in **Settings > Mileage**, then type the miles driven on a mileage expense.
+   - Delta Sky Club receipts count as **Airfare / baggage**, not meals.
+3. **Save.** Check the form as it will print and the receipt document, then click **Save the form and receipt document**. Two files land in your trip folder:
+   - `Expense form WO <n> week ending <YYYY-MM-DD>.xls`
+   - `Receipts WO <n> week ending <YYYY-MM-DD>.docx`
 
-## 5. Updates, data and uninstalling
+Warnings ("Worth a look") never block saving. Everything saves as you go.
 
-- The app checks for updates when it starts. When one is ready, click **Restart** to apply it.
-- Your reports and receipts are stored in `%APPDATA%\expense-report-creator\`. Uninstalling leaves this folder in place.
-- To remove the app, go to **Windows Settings → Apps → Expense Report Creator → Uninstall**.
+## 5. Handy extras
 
-## 6. Questions or problems
+- **Continue this trip into next week** (from a report's menu or after saving) starts next week's report for the same work order.
+- **Folders** lists what's in your expense folder (choose it in **Settings > Your expense folder**): past forms with their totals, receipt packets and loose receipts, all searchable. The app only reads that folder.
+- **Text size** (**A-** / **A+** at the top right) and **Light / Dark** (in the left rail).
 
-Contact Hasan. This app is a helper for filling in the form. It doesn't replace company policy, and the approver's decision is final.
+## 6. When HR sends a new form
+
+Go to **Settings > Company form** and choose the new `.xls`. The app checks the layout before using it. If it isn't recognised, it says so and keeps the current form. You can always go back to the built-in SFT form.
+
+## 7. Updates, your data and uninstalling
+
+- The app checks this repository for updates when it starts. When one is ready, restart to apply it.
+- Your reports are stored in `%APPDATA%\Expense Report Creator\`. Uninstalling leaves this folder in place.
+- To remove the app: **Windows Settings > Apps > Installed apps > Expense Report Creator > Uninstall**.
+
+## 8. Questions or problems
+
+Contact Hasan. The app fills in the form you already hand in. It doesn't replace company policy, and your approver's decision is final.
